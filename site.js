@@ -44,8 +44,8 @@ const apps = [
   {
     name: "Mycel", symbol: "⌘", version: "0.9.4", language: "C++ / Qt",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
-    ja: "フォルダーの中身を、ホワイトボード型マインドマップとして眺めるファイルブラウザー。",
-    en: "A file browser that turns a directory into a whiteboard-style visual mind map."
+    ja: "システムのフォルダー／ファイル構造をデータソースとして、情報をホワイトボード型のマインドマップに配置するツール。",
+    en: "A mind-map tool that uses the system's folder and file structure as its data source and lays information out on a whiteboard-style canvas."
   },
   {
     name: "mdv", symbol: "#", version: "0.5.1", language: "C++ / Qt",

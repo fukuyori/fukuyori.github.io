@@ -1,0 +1,21 @@
+# Local GitHub inventory helpers (not part of the website)
+github.list
+github.ps1
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor settings and temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Optional local tooling output
+node_modules/
+dist/
+coverage/
+*.log
