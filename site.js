@@ -44,8 +44,8 @@ const apps = [
   {
     name: "Mycel", symbol: "⌘", version: "0.9.4", language: "C++ / Qt",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
-    ja: "システムのフォルダー／ファイル構造をデータソースとして、情報をホワイトボード型のマインドマップに配置するツール。",
-    en: "A mind-map tool that uses the system's folder and file structure as its data source and lays information out on a whiteboard-style canvas."
+    ja: "既存のフォルダとファイルをそのままノードとして扱うマインドマップツールです。独自形式への変換が不要なため、他のアプリケーションとの併用も容易です。将来的には、ファイルと処理をつなぐパイプライン用途への拡張も検討しています。",
+    en: "A mind-mapping tool that treats existing folders and files as nodes without converting them to a proprietary format, making it easy to use alongside other applications. Future plans include exploring its use as a pipeline that connects files and processes."
   },
   {
     name: "mdv", symbol: "#", version: "0.5.1", language: "C++ / Qt",
