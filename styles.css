@@ -502,6 +502,12 @@ a {
   background: var(--blue);
 }
 
+.feature-card.snapnote {
+  grid-column: span 12;
+  min-height: 360px;
+  background: #dbe7ff;
+}
+
 .feature-media {
   height: 56%;
   overflow: hidden;
@@ -573,7 +579,8 @@ a {
 
 .feature-card.rakukan .feature-content,
 .feature-card.wtmux .feature-content,
-.feature-card.spindle .feature-content {
+.feature-card.spindle .feature-content,
+.feature-card.snapnote .feature-content {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -615,6 +622,19 @@ a {
   border-radius: 36% 64% 53% 47% / 43% 43% 57% 57%;
   background: var(--paper-strong);
   transform: rotate(7deg);
+}
+
+.snapnote-art {
+  position: absolute;
+  top: 22px;
+  right: 52px;
+  width: 205px;
+  height: 205px;
+  transform: rotate(4deg);
+}
+
+.feature-card.snapnote .feature-content {
+  max-width: 760px;
 }
 
 .catalog-toolbar {
@@ -660,6 +680,14 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.extensions {
+  background: #e7f0ff;
+}
+
+.extension-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .app-card {
@@ -866,7 +894,8 @@ a {
   .feature-card.tfx,
   .feature-card.rakukan,
   .feature-card.wtmux,
-  .feature-card.spindle {
+  .feature-card.spindle,
+  .feature-card.snapnote {
     grid-column: span 12;
   }
 
@@ -950,12 +979,19 @@ a {
     right: 24px;
   }
 
+  .snapnote-art {
+    width: 135px;
+    height: 135px;
+    right: 20px;
+  }
+
   .catalog-toolbar {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .app-grid,
+  .extension-grid,
   .principle-grid {
     grid-template-columns: 1fr;
   }

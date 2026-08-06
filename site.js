@@ -88,37 +88,85 @@ const apps = [
     platforms: ["Windows"], filters: ["windows"], color: "#cbb7ff",
     ja: "会話・講義・映画などに合わせてPC音声を聞き取りやすく整えるオーディオ補助アプリ。",
     en: "An audio accessibility tool that makes PC sound easier to hear with purpose-built presets."
+  },
+  {
+    name: "Gaze", repo: "gaze", symbol: "◉◉", language: "Rust / egui",
+    platforms: ["Windows"], filters: ["windows"], color: "#f8b8d0",
+    ja: "マウスカーソルを目で追い、瞬きや休息もする、xeyes風のWindowsデスクトップアプリ。",
+    en: "An expressive xeyes-style Windows desktop app that follows the cursor, blinks, rests, and sleeps."
+  },
+  {
+    name: "j-cmd", symbol: "j>", version: "2.2.1", language: "Rust",
+    platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#c9ff45",
+    ja: "パスではなくキーワードで移動する、Windows・macOS・Linux向けの高速ディレクトリジャンプコマンド。",
+    en: "A fast directory-jump command for Windows, macOS, and Linux: jump by keyword, not by path."
+  },
+  {
+    name: "Agent-Resume", symbol: "↻", language: "Go",
+    platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal", "ai"], color: "#cbb7ff",
+    ja: "現在のディレクトリに関連する複数のCLIコーディングエージェントのセッションを探し、選んで再開するツール。",
+    en: "A CLI for finding and resuming sessions from multiple coding agents associated with the current directory."
+  },
+  {
+    name: "pdr", symbol: "PDF", version: "0.1.6", language: "Rust / egui",
+    platforms: ["Windows", "Linux"], filters: ["cross", "reading"], color: "#ff9c68",
+    ja: "見開き、左右綴じ、目次、画像補正、適応解像度レンダリングに対応する軽快なPDFリーダー。",
+    en: "A responsive PDF reader with spreads, left/right binding, outlines, image correction, and adaptive rendering."
+  }
+];
+
+const browserExtensions = [
+  {
+    name: "YoutubeGrid", symbol: "▶", language: "JavaScript",
+    platforms: ["Firefox", "Chrome"], color: "#ff826f",
+    ja: "YouTubeのグリッド列数や検索結果の表示を調整し、指定キーワード、Shorts、ゲームルームを非表示にする機能拡張。",
+    en: "A browser extension for customizing YouTube grids and search results, with filters for keywords, Shorts, and Game Room sections."
+  },
+  {
+    name: "X-MaskWord", symbol: "X", language: "JavaScript",
+    platforms: ["Firefox"], color: "#91c8ff",
+    ja: "指定した言葉や反応数を含むXの投稿・メッセージを非表示またはハイライトするFirefox機能拡張。",
+    en: "A Firefox extension that hides or highlights X posts and messages based on configured words or engagement counts."
   }
 ];
 
 const lang = document.documentElement.lang === "en" ? "en" : "ja";
 const grid = document.querySelector("[data-app-grid]");
+const extensionGrid = document.querySelector("[data-extension-grid]");
 const count = document.querySelector("[data-catalog-count]");
+
+function cardMarkup(app, includeFilters = false) {
+  const meta = [...app.platforms, app.language]
+    .map((item) => `<span>${item}</span>`).join("");
+  const filterList = includeFilters ? ` data-filters="${["all", ...app.filters].join(" ")}"` : "";
+  const version = app.preRelease ? "Pre-release" : app.version ? `v${app.version}` : "GitHub";
+  const versionClass = app.preRelease ? "app-version pre-release" : "app-version";
+  const repo = app.repo || app.name;
+  const label = lang === "ja" ? `${app.name}のGitHubリポジトリを開く` : `Open the ${app.name} GitHub repository`;
+
+  return `
+    <a class="app-card reveal" href="https://github.com/fukuyori/${repo}" target="_blank" rel="noreferrer"${filterList}
+       aria-label="${label}" style="--card-accent:${app.color}">
+      <div class="app-card-header">
+        <span class="app-symbol" aria-hidden="true">${app.symbol}</span>
+        <span class="${versionClass}">${version} ↗</span>
+      </div>
+      <h3>${app.name}</h3>
+      <p>${app[lang]}</p>
+      <div class="app-meta">${meta}</div>
+    </a>`;
+}
 
 function renderApps() {
   if (!grid) return;
-  grid.innerHTML = apps.map((app) => {
-    const meta = [...app.platforms, app.language]
-      .map((item) => `<span>${item}</span>`).join("");
-    const filterList = ["all", ...app.filters].join(" ");
-    const version = app.preRelease ? "Pre-release" : app.version ? `v${app.version}` : "GitHub";
-    const versionClass = app.preRelease ? "app-version pre-release" : "app-version";
-    const repo = app.repo || app.name;
-    const label = lang === "ja" ? `${app.name}のGitHubリポジトリを開く` : `Open the ${app.name} GitHub repository`;
-
-    return `
-      <a class="app-card reveal" href="https://github.com/fukuyori/${repo}" target="_blank" rel="noreferrer"
-         data-filters="${filterList}" aria-label="${label}" style="--card-accent:${app.color}">
-        <div class="app-card-header">
-          <span class="app-symbol" aria-hidden="true">${app.symbol}</span>
-          <span class="${versionClass}">${version} ↗</span>
-        </div>
-        <h3>${app.name}</h3>
-        <p>${app[lang]}</p>
-        <div class="app-meta">${meta}</div>
-      </a>`;
-  }).join("");
+  grid.innerHTML = apps.map((app) => cardMarkup(app, true)).join("");
   updateCount(apps.length);
+  observeReveals();
+}
+
+function renderBrowserExtensions() {
+  if (!extensionGrid) return;
+  extensionGrid.innerHTML = browserExtensions.map((extension) => cardMarkup(extension)).join("");
   observeReveals();
 }
 
@@ -134,7 +182,7 @@ document.querySelectorAll("[data-filter]").forEach((button) => {
       item.setAttribute("aria-pressed", String(item === button));
     });
     let visible = 0;
-    document.querySelectorAll(".app-card").forEach((card) => {
+    grid.querySelectorAll(".app-card").forEach((card) => {
       const show = active === "all" || card.dataset.filters.split(" ").includes(active);
       card.hidden = !show;
       if (show) visible += 1;
@@ -178,4 +226,5 @@ document.querySelectorAll("[data-year]").forEach((item) => {
 });
 
 renderApps();
+renderBrowserExtensions();
 observeReveals();
