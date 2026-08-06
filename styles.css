@@ -719,6 +719,14 @@ a {
   gap: 14px;
 }
 
+.app-release {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+
 .app-symbol {
   display: grid;
   width: 48px;
@@ -737,6 +745,13 @@ a {
   color: var(--muted);
   font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
   font-size: 0.7rem;
+}
+
+.app-updated {
+  color: var(--muted);
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.66rem;
+  white-space: nowrap;
 }
 
 .app-version.pre-release {
