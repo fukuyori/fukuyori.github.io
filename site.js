@@ -49,7 +49,7 @@ const apps = [
   },
   {
     name: "pdr", symbol: "PDF", version: "0.1.8", updated: "2026-07-23", language: "Rust / egui",
-    platforms: ["Windows", "Linux"], filters: ["cross", "reading"], color: "#ff9c68",
+    platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading"], color: "#ff9c68",
     ja: "見開き、左右綴じ、目次、画像補正、適応解像度レンダリングに対応する軽快なPDFリーダー。",
     en: "A responsive PDF reader with spreads, left/right binding, outlines, image correction, and adaptive rendering."
   },
