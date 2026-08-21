@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tfx — ターミナル好きのためのファイルマネージャー</title>
+  <meta name="description" content="ターミナルの速さとGUIの見通しのよさを一つにした、macOS・Windows・Linux向けファイルマネージャー tfx の紹介。">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta property="og:title" content="tfx — Terminal-inspired File Explorer">
+  <meta property="og:description" content="キーボード中心で素早く、マウスでも直感的に扱えるファイルマネージャー。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/tfx-macos.png">
+  <link rel="alternate" hreflang="ja" href="./">
+  <link rel="alternate" hreflang="en" href="../en/tfx/">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site.js" defer></script>
+</head>
+<body class="product-page tfx-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="FUKUYORI SOFTWARE ホーム">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>FUKUYORI / SOFTWARE</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="ページ内ナビゲーション" data-site-nav>
+        <a href="#concept">コンセプト</a>
+        <a href="#features">機能</a>
+        <a href="#use">使い方</a>
+        <a href="#platforms">各OS版</a>
+        <a href="https://github.com/fukuyori/tfx" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a class="language-link" href="../en/tfx/" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="product-hero">
+      <div class="product-hero-copy reveal">
+        <p class="eyebrow">Terminal-inspired File Explorer</p>
+        <h1><span>tfx</span><br>手はキーボードに。<br>視線はファイルに。</h1>
+        <p class="product-lead">ターミナルの速さと、デスクトップアプリの見通しのよさを一つに。キーボード中心で素早く、必要なときはマウスでも直感的に扱えるファイルマネージャーです。</p>
+        <div class="product-actions">
+          <a class="button" href="#platforms">OSを選ぶ</a>
+          <a class="button secondary" href="https://github.com/fukuyori/tfx" target="_blank" rel="noreferrer">GitHubで見る</a>
+        </div>
+        <ul class="product-tags" aria-label="対応環境">
+          <li>macOS</li><li>Windows</li><li>Linux</li><li>Keyboard first</li>
+        </ul>
+      </div>
+      <div class="product-showcase reveal" aria-label="tfxの画面">
+        <figure class="product-shot product-shot-main">
+          <img src="../assets/tfx-macos.png" alt="macOS版tfxの2ペインファイル画面">
+          <figcaption>tfx / macOS</figcaption>
+        </figure>
+        <figure class="product-shot product-shot-sub">
+          <img src="../assets/tfx-windows.png" alt="Windows版tfxのファイル一覧画面">
+          <figcaption>tfx / Windows</figcaption>
+        </figure>
+        <div class="product-command" aria-hidden="true"><span>$</span> open -a tfx "$PWD"<b>_</b></div>
+      </div>
+    </section>
+
+    <div class="product-marquee" aria-hidden="true"><div><span>2 panes</span><span>rich preview</span><span>folder tree</span><span>integrated terminal</span><span>config.toml</span><span>2 panes</span><span>rich preview</span><span>folder tree</span><span>integrated terminal</span><span>config.toml</span></div></div>
+
+    <section class="product-section" id="concept">
+      <div class="product-shell product-intro reveal">
+        <p class="section-kicker">01 / Why tfx</p>
+        <div>
+          <h2>ターミナルの作業感を、<br>そのままGUIへ。</h2>
+          <p>Finderやエクスプローラーの分かりやすさはそのままに、2ペインで一気にコピーや移動をしたい。キーボードだけで歩き回り、MarkdownやCSVをその場で確かめたい。tfxは、そんな日々の小さな引っかかりから生まれました。</p>
+          <p>名前は <strong>Terminal-inspired interface File eXplorer</strong> の頭文字。OSごとの使い心地を大切にするため、それぞれのネイティブ技術で実装しながら、設計思想と設定形式を共有しています。</p>
+          <p>目指しているのは、ターミナルをそのままGUIに置き換えることではありません。コマンド操作の速さ、ファイル一覧の見通し、ドラッグ＆ドロップの分かりやすさを、作業に応じて自然に行き来できることです。普段はキーだけで移動し、必要な場面ではマウスで直接つかむ。その両方を手放したくない人のための道具です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section-dark" id="features">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">02 / Core features</p><h2>移す、見る、操る。<br>流れを止めないための機能。</h2></div>
+        <div class="product-feature-grid">
+          <article class="product-feature reveal"><span>01</span><h3>2ペイン + フォルダツリー</h3><p>単独表示と左右分割を切り替え、ペインごとに独立して移動できます。コピー元と保存先を同時に見ながら操作できるため、別ウィンドウを並べ直す必要がありません。ドラッグ＆ドロップ、ルートから辿れるツリー、ピン留めフォルダも組み合わせ、頻繁に使う場所への移動を短くします。</p></article>
+          <article class="product-feature reveal"><span>02</span><h3>開かずに分かるプレビュー</h3><p>画像、Markdown、HTML、CSV・TSV、JSONなどをファイル一覧の横で確認できます。MarkdownやHTMLは描画結果とソース、CSVは表形式、JSONは整形表示へ切り替えられます。複数選択時には概要をまとめ、ZIPは展開せずに内容を確認できるため、「目的のファイルか確かめる」ためだけのアプリ起動を減らせます。</p></article>
+          <article class="product-feature reveal"><span>03</span><h3>必要なファイル操作を一通り</h3><p>ファイルとフォルダの新規作成、インライン改名、コピー、カット、貼り付け、ゴミ箱への移動、ZIP圧縮・展開に対応します。サブフォルダを含む再帰検索はバックグラウンドで実行され、外部アプリによる変更はファイル監視で一覧へ反映。ソート、列の表示順、複数選択、前回の表示状態も日常の操作を支えます。</p></article>
+          <article class="product-feature reveal"><span>04</span><h3>端末と設定をすぐそばに</h3><p>現在のフォルダを作業ディレクトリとして外部端末を開けるほか、ファイル一覧と同じ画面に内蔵端末を表示できます。共通の <code>config.toml</code> では色やフォントだけでなく、ショートカット、起動時のレイアウト、拡張子ごとのアプリ、独自コマンドまで定義できます。GUIで場所を選び、そのままコマンドの作業へ移れます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-use-section" id="use">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">03 / In daily use</p><h2>ファイルを探したあとも、<br>作業の流れを切らない。</h2></div>
+        <div class="use-case-grid">
+          <article class="use-case reveal"><p class="use-case-label">MOVE</p><h3>整理するとき</h3><p>左に受信フォルダ、右にプロジェクトの保存先を開けば、移動先を見失わずに分類できます。各ペインは別々の履歴を持つため、片方の場所を保ったまま、もう片方だけを深い階層へ進めます。</p><p>マウスで複数ファイルを選んでドラッグすることも、キーボードで選択してコピー・移動することもできます。作業量やファイルの種類に合わせて操作方法を変えられます。</p></article>
+          <article class="use-case reveal"><p class="use-case-label">INSPECT</p><h3>内容を選別するとき</h3><p>似た名前の画像、Markdownメモ、CSVデータを一つずつアプリで開かず、選択するだけで中身を確認できます。ファイルを開いて閉じる往復を減らし、一覧の文脈を保ったまま判断できます。</p><p>ZIPの中身や複数選択の概要も読み取り専用で確認できるため、展開や編集を始める前の安全な下見にも向いています。</p></article>
+          <article class="use-case reveal"><p class="use-case-label">ACT</p><h3>次の処理へ進むとき</h3><p>対象フォルダを見つけたら、その場所で内蔵端末を開き、Gitやビルドコマンドを実行できます。よく使う処理は独自コマンドとして登録し、コンテキストメニューから呼び出すこともできます。</p><p>ファイルを探す画面と処理を実行する画面が同じ場所につながるため、パスをコピーして端末へ貼り直す手間を抑えられます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" id="workflow">
+      <div class="product-shell product-config reveal">
+        <div>
+          <p class="section-kicker">04 / Make it yours</p>
+          <h2>使い方を、設定にする。</h2>
+          <p>見た目だけでなく、キー操作や外部アプリ、作業用コマンドまで自分の環境に合わせられます。設定ファイルの基本構造はmacOS版とWindows版で共通なので、OSを使い分けても同じ考え方で環境を整えられます。</p>
+          <p>たとえば配色を端末とそろえ、起動時から2ペインとプレビューを開き、特定の拡張子を好みのエディターへ渡せます。Git Pullやビルドのような定型処理は、現在のフォルダを表す <code>{cwd}</code> を使ってメニューへ追加できます。</p>
+        </div>
+        <pre aria-label="config.tomlの設定例"><code><span>version</span> = 1
+
+[font]
+mono = "monospace"
+size = 13
+
+[colors]
+fileListBackground = "#020A12"
+directoryForeground = "#66D9FF"
+
+[[commands]]
+name = "Git Pull"
+run = "git -C {cwd} pull --ff-only"
+terminal = true</code></pre>
+      </div>
+    </section>
+
+    <section class="product-section product-platform-section" id="platforms">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">05 / Choose your tfx</p><h2>同じ思想を、<br>それぞれのOSらしく。</h2></div>
+        <div class="platform-grid">
+          <article class="platform-card reveal">
+            <div class="platform-card-top"><span>01</span><span>Swift / SwiftUI</span></div><h3>macOS</h3>
+            <p>最初に開発された本家版です。Appleの標準フレームワークを活用し、ファイル操作をmacOSの作法へ馴染ませています。</p>
+            <ul class="platform-points"><li>PDFKit、AVKit、WebKit、Quick Lookによるプレビュー</li><li>ペインごとのフォルダタブ</li><li>Finderタグ、エイリアス、シンボリックリンクに対応</li><li>コマンドラインから現在のフォルダを指定して起動可能</li></ul>
+            <a class="button" href="https://github.com/fukuyori/tfx" target="_blank" rel="noreferrer">macOS版 ↗</a>
+          </article>
+          <article class="platform-card reveal">
+            <div class="platform-card-top"><span>02</span><span>C# / WPF</span></div><h3>Windows</h3>
+            <p>macOS版の考え方をWPFでWindowsへ移植した版です。Windows 10／11の操作やシェル機能に合わせて個別に作り込んでいます。</p>
+            <ul class="platform-points"><li>WebView2、xterm.js、ConPTYによる内蔵シェル</li><li>ショートカット作成、ゴミ箱、完全削除などWindows流の操作</li><li>シェルアイコンとサムネイルのキャッシュ</li><li>複数の方式を切り替えるPDFプレビュー</li></ul>
+            <a class="button" href="https://github.com/fukuyori/tfx-for-windows" target="_blank" rel="noreferrer">Windows版 ↗</a>
+          </article>
+          <article class="platform-card reveal">
+            <div class="platform-card-top"><span>03</span><span>C++ / Qt</span></div><h3>Linux</h3>
+            <p>tfxの操作思想をLinuxデスクトップへ届けるQt版です。OS固有の違いを受け入れながら、ファイル一覧と端末を一つの作業空間にまとめます。</p>
+            <ul class="platform-points"><li>用途に応じて配置できるドッキングペイン</li><li>ファイル内容をその場で確認するプレビュー</li><li>作業中のディレクトリにつながる内蔵端末</li><li>C++とQtによるネイティブデスクトップUI</li></ul>
+            <a class="button" href="https://github.com/fukuyori/tfx-for-linux" target="_blank" rel="noreferrer">Linux版 ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-cta">
+      <div class="product-shell reveal"><p class="section-kicker">Stay in your flow</p><h2>次のファイル操作を、<br>もっと短く。</h2><p>使ってみたいOSのリポジトリから、リリースと詳しい導入方法を確認できます。</p><a class="button" href="#platforms">tfxを選ぶ</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>© <span data-year></span> Nor Fukuyori / SPUMONI.ORG</p><div class="footer-links"><a href="../">ホーム</a><a href="https://qiita.com/spumoni/items/9c7277d66e9d0ba8be15" target="_blank" rel="noreferrer">Qiitaの記事 ↗</a><a href="../en/tfx/" lang="en">English</a></div></div></footer>
+</body>
+</html>

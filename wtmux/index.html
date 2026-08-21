@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wtmux — tmuxの操作感を、すべてのデスクトップOSへ</title>
+  <meta name="description" content="ペイン、タブ、コピー、検索、AIエージェント監視を備えたRust製ターミナルマルチプレクサー wtmux の紹介。">
+  <meta name="theme-color" content="#08130d">
+  <meta property="og:title" content="wtmux — A tmux-like terminal multiplexer">
+  <meta property="og:description" content="tmuxの操作感をWindows、macOS、Linuxへ。複数の端末作業を一つの画面で。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/wtmux-screenshot-panes.png">
+  <link rel="alternate" hreflang="ja" href="./">
+  <link rel="alternate" hreflang="en" href="../en/wtmux/">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site.js" defer></script>
+</head>
+<body class="product-page wtmux-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="FUKUYORI SOFTWARE ホーム"><span class="brand-mark" aria-hidden="true"></span><span>FUKUYORI / SOFTWARE</span></a>
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="ページ内ナビゲーション" data-site-nav>
+        <a href="#concept">コンセプト</a><a href="#features">機能</a><a href="#agents">AIエージェント</a><a href="#keys">キー操作</a><a href="https://github.com/fukuyori/wtmux" target="_blank" rel="noreferrer">GitHub ↗</a><a class="language-link" href="../en/wtmux/" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wtmux-hero">
+      <div class="wtmux-hero-copy reveal">
+        <p class="eyebrow">A tmux-like terminal multiplexer / Rust</p>
+        <h1><span>wtmux</span><br>端末を分ける。<br>作業はつなげる。</h1>
+        <p class="product-lead">tmuxで馴染んだタブとペインの操作を、Windows・macOS・Linuxへ。複数のシェル、開発サーバー、エージェントを一つの端末画面にまとめ、キーボードから作業の全体を動かせます。</p>
+        <div class="product-actions"><a class="button" href="https://github.com/fukuyori/wtmux/releases" target="_blank" rel="noreferrer">wtmuxを入手 ↗</a><a class="button secondary" href="#features">機能を見る</a></div>
+        <ul class="product-tags" aria-label="製品情報"><li>v3.3.1</li><li>Windows</li><li>macOS</li><li>Linux</li><li>MIT</li></ul>
+      </div>
+      <figure class="wtmux-hero-shot reveal">
+        <img src="../assets/wtmux-screenshot-panes.png" alt="wtmuxでClaude Code、OpenAI Codex、PowerShellを3ペインに分割した画面">
+        <figcaption><span>1:main / 3 panes</span><span>agents + shell</span></figcaption>
+      </figure>
+    </section>
+
+    <div class="product-marquee" aria-hidden="true"><div><span>Ctrl+B</span><span>tabs</span><span>split panes</span><span>copy mode</span><span>search</span><span>agent dashboard</span><span>Ctrl+B</span><span>tabs</span><span>split panes</span><span>copy mode</span><span>search</span><span>agent dashboard</span></div></div>
+
+    <section class="product-section" id="concept">
+      <div class="product-shell product-intro reveal">
+        <p class="section-kicker">01 / Why wtmux</p>
+        <div>
+          <h2>tmuxの習慣を、<br>いつものOSでも。</h2>
+          <p>端末で複数の作業を並行すると、ウィンドウはすぐに増えていきます。シェル、エディター、ログ、ビルド、SSH接続を別々に開くと、必要な画面を探すだけで集中が途切れます。wtmuxは、それらをタブと分割ペインに整理するターミナルマルチプレクサーです。</p>
+          <p>基本操作はtmuxと同じく、デフォルトでは <code>Ctrl+B</code> を押してからコマンドキーを入力します。新しいタブを作る、上下左右へ分割する、ペインを移動・拡大する、といった操作を既存のtmuxの知識で始められます。キーバインドは設定から変更でき、プレフィックスを使わない独自操作も登録できます。</p>
+          <p>最初はWindowsのConPTYを活用するRust製ツールとして生まれ、現在はPOSIX PTYを通じてmacOSとLinuxにも対応しています。ホストOSごとの端末基盤を使いながら、同じ操作体系と設定を持ち運べることを目指しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section-dark" id="features">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">02 / Core features</p><h2>ひとつの端末に、<br>複数の仕事場をつくる。</h2></div>
+        <div class="product-feature-grid">
+          <article class="product-feature reveal"><span>01</span><h3>タブと分割ペイン</h3><p>作業単位をタブとして分け、各タブを上下・左右へ分割できます。方向キーでフォーカスを移し、境界をリサイズし、必要なペインだけを一時的にズーム。横均等、縦均等、メイン横、メイン縦、タイルのレイアウトを切り替えながら、作業に合う配置をすぐ作れます。</p></article>
+          <article class="product-feature reveal"><span>02</span><h3>コピー、検索、履歴</h3><p>vim風のコピーモードでスクロールバックを移動し、範囲を選んでクリップボードへコピーできます。前方・後方検索と一致箇所の移動に対応し、長いログから必要な行を追えます。シェルとは別にコマンド履歴も記録し、複雑なコマンドを検索して再利用できます。</p></article>
+          <article class="product-feature reveal"><span>03</span><h3>シェルと文字コード</h3><p>Windowsではcmd.exe、Windows PowerShell、PowerShell 7、WSLを選択でき、macOSとLinuxではbash、zsh、fishなどのシェルを利用できます。UTF-8に加え、WindowsではShift-JISにも対応。WindowsではConPTY、macOS／LinuxではPOSIX PTYが各ペインを支えます。</p></article>
+          <article class="product-feature reveal"><span>04</span><h3>テーマと表示互換性</h3><p>Solarized、Monokai、Nord、Dracula、Gruvbox、Tokyo Nightなど8種類のテーマを内蔵。Nerd FontやPowerline、OSC 8リンク、拡張下線、OSC 52クリップボード、Kittyキーボードプロトコルにも対応し、モダンなプロンプトやTUIアプリの表現を保ちます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section wtmux-screen-section">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">03 / See the workspace</p><h2>状況を見渡し、<br>必要な場所へ入力する。</h2></div>
+        <div class="wtmux-screen-grid">
+          <figure class="wtmux-screen reveal"><img src="../assets/wtmux-screenshot-panes.png" alt="Claude Code、OpenAI Codex、PowerShellを同時に表示するwtmux"><figcaption><b>複数ペインの作業画面</b><span>エージェントとシェルを同じタブで監視</span></figcaption></figure>
+          <figure class="wtmux-screen reveal"><img src="../assets/wtmux-screenshot-composer.png" alt="wtmuxの複数行メッセージ作成画面"><figcaption><b>メッセージコンポーザー</b><span>送信前に複数行の指示を編集</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section wtmux-agent-section" id="agents">
+      <div class="product-shell wtmux-agent-layout">
+        <div class="reveal"><p class="section-kicker">04 / Agent workflow</p><h2>複数のAIエージェントを、<br>一つの画面から。</h2><p>コーディングエージェントを複数のペインで動かすと、どの処理が進行中で、どれが入力待ちなのかを追う必要があります。wtmuxは各ペインを <strong>WORKING / BLOCKED / DONE / IDLE</strong> に分類し、ダッシュボードやステータス表示から状態を確認できます。</p><p>メッセージコンポーザーは、IMEを使いながら複数行の指示を書き、内容を確認してから対象ペインへ送信するための編集画面です。ペインを直接操作する <code>send-keys</code>、表示内容を取得する <code>capture-pane</code>、状態を明示する <code>report-state</code> も備え、手動操作からスクリプトによる連携まで段階的に広げられます。</p></div>
+        <div class="agent-flow reveal" aria-label="エージェント作業の流れ"><div><span>1</span><b>Split</b><p>役割ごとにペインを分ける</p></div><div><span>2</span><b>Monitor</b><p>作業中・入力待ちを見分ける</p></div><div><span>3</span><b>Compose</b><p>複数行の指示を編集して送る</p></div><div><span>4</span><b>Automate</b><p>CLIから入力と出力を制御する</p></div></div>
+      </div>
+    </section>
+
+    <section class="product-section product-section-dark" id="keys">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">05 / Familiar keys</p><h2>まずは、tmuxと同じ<br>プレフィックスから。</h2></div>
+        <div class="key-grid reveal">
+          <div><kbd>Ctrl+B</kbd><kbd>c</kbd><p>新しいタブ</p></div><div><kbd>Ctrl+B</kbd><kbd>%</kbd><p>左右に分割</p></div><div><kbd>Ctrl+B</kbd><kbd>"</kbd><p>上下に分割</p></div><div><kbd>Ctrl+B</kbd><kbd>z</kbd><p>ペインをズーム</p></div><div><kbd>Ctrl+B</kbd><kbd>[</kbd><p>コピーモード</p></div><div><kbd>Ctrl+B</kbd><kbd>/</kbd><p>スクロールバック検索</p></div><div><kbd>Ctrl+B</kbd><kbd>Space</kbd><p>レイアウト切替</p></div><div><kbd>Ctrl+B</kbd><kbd>m</kbd><p>メッセージ作成</p></div>
+        </div>
+        <p class="key-note reveal">すべてのプレフィックス操作は <code>config.toml</code> の <code>[bind]</code> で変更・解除できます。<code>[bind_root]</code> を使えば、プレフィックスなしのショートカットも追加できます。</p>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="product-shell wtmux-platform-layout reveal">
+        <div><p class="section-kicker">06 / Native terminal backends</p><h2>3つのOS、<br>ひとつの操作体系。</h2><p>WindowsではOS標準の擬似端末ConPTYを利用し、コンソールアプリやWSLを各ペインで動かします。macOSとLinuxではPOSIX PTYを使い、普段のターミナルの中でwtmuxを起動します。</p><p>設定ファイル、タブとペイン、コピーと検索、テーマ、マウス操作はプラットフォームをまたいで共有されます。Windowsで覚えた操作をmacOSやLinuxでもそのまま使えるため、端末環境が変わっても作業のリズムを保てます。</p></div>
+        <div class="backend-list"><div><span>Windows</span><b>ConPTY</b><small>cmd / PowerShell / pwsh / WSL</small></div><div><span>macOS</span><b>POSIX PTY</b><small>zsh / bash / fish / custom shell</small></div><div><span>Linux</span><b>POSIX PTY</b><small>bash / zsh / fish / custom shell</small></div></div>
+      </div>
+    </section>
+
+    <section class="product-cta wtmux-cta"><div class="product-shell reveal"><p class="section-kicker">One terminal. Many tasks.</p><h2>端末の中に、<br>作業机をつくろう。</h2><p>GitHub ReleasesではWindows、macOS向けの配布物を公開しています。Linuxではパッケージ作成またはソースからのビルドを利用できます。</p><a class="button" href="https://github.com/fukuyori/wtmux" target="_blank" rel="noreferrer">GitHubでwtmuxを見る ↗</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>© <span data-year></span> Nor Fukuyori / SPUMONI.ORG</p><div class="footer-links"><a href="../">ホーム</a><a href="https://qiita.com/spumoni/items/7d43ed7e579d99cfda3e" target="_blank" rel="noreferrer">Qiitaの記事 ↗</a><a href="../en/wtmux/" lang="en">English</a></div></div></footer>
+</body>
+</html>

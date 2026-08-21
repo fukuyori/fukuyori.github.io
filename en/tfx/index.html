@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tfx — A file manager for terminal-minded people</title>
+  <meta name="description" content="Meet tfx, a terminal-inspired file manager for macOS, Windows, and Linux that combines keyboard speed with desktop clarity.">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta property="og:title" content="tfx — Terminal-inspired File Explorer">
+  <meta property="og:description" content="Keyboard-fast, mouse-friendly file management for macOS, Windows, and Linux.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../../assets/tfx-macos.png">
+  <link rel="alternate" hreflang="ja" href="../../tfx/">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../site.js" defer></script>
+</head>
+<body class="product-page tfx-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="FUKUYORI SOFTWARE home"><span class="brand-mark" aria-hidden="true"></span><span>FUKUYORI / SOFTWARE</span></a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Page navigation" data-site-nav>
+        <a href="#concept">Concept</a><a href="#features">Features</a><a href="#use">In use</a><a href="#platforms">Platforms</a><a href="https://github.com/fukuyori/tfx" target="_blank" rel="noreferrer">GitHub ↗</a><a class="language-link" href="../../tfx/" lang="ja">日本語</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="product-hero">
+      <div class="product-hero-copy reveal">
+        <p class="eyebrow">Terminal-inspired File Explorer</p>
+        <h1><span>tfx</span><br>Hands on the keys.<br>Eyes on your files.</h1>
+        <p class="product-lead">The speed of a terminal with the clarity of a desktop app. tfx is keyboard-first when you want to move fast, and mouse-friendly when direct manipulation feels right.</p>
+        <div class="product-actions"><a class="button" href="#platforms">Choose your OS</a><a class="button secondary" href="https://github.com/fukuyori/tfx" target="_blank" rel="noreferrer">View on GitHub</a></div>
+        <ul class="product-tags" aria-label="Supported environments"><li>macOS</li><li>Windows</li><li>Linux</li><li>Keyboard first</li></ul>
+      </div>
+      <div class="product-showcase reveal" aria-label="Screens from tfx">
+        <figure class="product-shot product-shot-main"><img src="../../assets/tfx-macos.png" alt="Two-pane file view in tfx for macOS"><figcaption>tfx / macOS</figcaption></figure>
+        <figure class="product-shot product-shot-sub"><img src="../../assets/tfx-windows.png" alt="File list in tfx for Windows"><figcaption>tfx / Windows</figcaption></figure>
+        <div class="product-command" aria-hidden="true"><span>$</span> open -a tfx "$PWD"<b>_</b></div>
+      </div>
+    </section>
+
+    <div class="product-marquee" aria-hidden="true"><div><span>2 panes</span><span>rich preview</span><span>folder tree</span><span>integrated terminal</span><span>config.toml</span><span>2 panes</span><span>rich preview</span><span>folder tree</span><span>integrated terminal</span><span>config.toml</span></div></div>
+
+    <section class="product-section" id="concept"><div class="product-shell product-intro reveal"><p class="section-kicker">01 / Why tfx</p><div><h2>Bring the terminal workflow<br>into a visual interface.</h2><p>Finder and Explorer are approachable, but terminal-trained hands often want one more step: move files between two panes, navigate without leaving the keyboard, and inspect Markdown or CSV without opening another app. tfx grew from those everyday points of friction.</p><p>The name stands for <strong>Terminal-inspired interface File eXplorer</strong>. Each edition uses native technologies to respect its operating system while sharing the same product philosophy and configuration structure.</p><p>The goal is not to turn a terminal into a GUI. It is to move naturally between command-line speed, the context of a visible file list, and the immediacy of drag and drop. Navigate with keys most of the time, then reach for the mouse when direct manipulation is clearer. tfx is for people who do not want to give up either way of working.</p></div></div></section>
+
+    <section class="product-section product-section-dark" id="features">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">02 / Core features</p><h2>Move, inspect, control.<br>Keep the flow going.</h2></div>
+        <div class="product-feature-grid">
+          <article class="product-feature reveal"><span>01</span><h3>Two panes + folder tree</h3><p>Switch between a single view and a split layout, with independent navigation in each pane. Keep the source and destination visible at the same time instead of arranging multiple windows. Drag between panes, browse from the root, and pin frequently used folders to shorten repeated trips.</p></article>
+          <article class="product-feature reveal"><span>02</span><h3>Preview without opening</h3><p>Inspect images, Markdown, HTML, CSV, TSV, and JSON beside the file list. Toggle rendered and source views, display structured data in readable form, summarize multiple selections, or browse a ZIP archive without extracting it. Fewer one-off app launches means fewer interruptions while deciding which file you need.</p></article>
+          <article class="product-feature reveal"><span>03</span><h3>The file operations you expect</h3><p>Create files and folders, rename in place, copy, cut, paste, move to trash, compress, and extract. Recursive searches run in the background, file watching reflects outside changes, and sorting, column layouts, multi-selection, and persistent view state support everyday organization.</p></article>
+          <article class="product-feature reveal"><span>04</span><h3>Terminal and configuration nearby</h3><p>Launch an external terminal with the current folder as its working directory, or open the integrated terminal beside the file list. A shared <code>config.toml</code> controls colors, fonts, shortcuts, startup layouts, file associations, and custom commands. Find a location visually, then continue there on the command line.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-use-section" id="use"><div class="product-shell"><div class="product-heading reveal"><p class="section-kicker">03 / In daily use</p><h2>Finding a file should not<br>break the rest of the flow.</h2></div><div class="use-case-grid">
+      <article class="use-case reveal"><p class="use-case-label">MOVE</p><h3>When organizing</h3><p>Open an inbox on the left and a project destination on the right to classify files without losing sight of where they will go. Because each pane has its own history, one location can stay anchored while the other moves through a deep hierarchy.</p><p>Select and drag several files with the mouse, or stay on the keyboard for copy and move operations. The interaction can match the volume and type of material in front of you.</p></article>
+      <article class="use-case reveal"><p class="use-case-label">INSPECT</p><h3>When choosing content</h3><p>Review similarly named images, Markdown notes, or CSV files simply by moving the selection, without opening and closing a separate application for every item. You keep the context of the directory while making a decision.</p><p>Read-only views of ZIP contents and multi-selection summaries also provide a safer first look before extracting or editing anything.</p></article>
+      <article class="use-case reveal"><p class="use-case-label">ACT</p><h3>When moving to the next task</h3><p>Once you find the right folder, open the integrated terminal there and run Git, build, or maintenance commands. Repeated operations can become custom commands available from the context menu.</p><p>The place where you find files and the place where you process them remain connected, reducing the need to copy a path and paste it into another window.</p></article>
+    </div></div></section>
+
+    <section class="product-section" id="workflow"><div class="product-shell product-config reveal"><div><p class="section-kicker">04 / Make it yours</p><h2>Turn your workflow<br>into configuration.</h2><p>Customize more than appearance: tune key bindings, external applications, and routine commands for your environment. macOS and Windows share the same basic configuration structure, so the same ideas carry across both systems.</p><p>For example, match the palette to your terminal, start with two panes and preview already visible, or send a file type to your preferred editor. Routine actions such as Git Pull or a project build can use <code>{cwd}</code> for the current folder and appear directly in a menu.</p></div><pre aria-label="Example config.toml"><code><span>version</span> = 1
+
+[font]
+mono = "monospace"
+size = 13
+
+[colors]
+fileListBackground = "#020A12"
+directoryForeground = "#66D9FF"
+
+[[commands]]
+name = "Git Pull"
+run = "git -C {cwd} pull --ff-only"
+terminal = true</code></pre></div></section>
+
+    <section class="product-section product-platform-section" id="platforms">
+      <div class="product-shell">
+        <div class="product-heading reveal"><p class="section-kicker">05 / Choose your tfx</p><h2>One idea,<br>native to each OS.</h2></div>
+        <div class="platform-grid">
+          <article class="platform-card reveal"><div class="platform-card-top"><span>01</span><span>Swift / SwiftUI</span></div><h3>macOS</h3><p>The original edition, built around Apple frameworks so file management feels at home on macOS.</p><ul class="platform-points"><li>PDFKit, AVKit, WebKit, and Quick Look previews</li><li>Folder tabs within each pane</li><li>Finder tags, aliases, and symbolic links</li><li>Launch from the command line with a starting folder</li></ul><a class="button" href="https://github.com/fukuyori/tfx" target="_blank" rel="noreferrer">tfx for macOS ↗</a></article>
+          <article class="platform-card reveal"><div class="platform-card-top"><span>02</span><span>C# / WPF</span></div><h3>Windows</h3><p>A WPF translation of the macOS concept, shaped around Windows 10 and 11 shell conventions.</p><ul class="platform-points"><li>Integrated shell using WebView2, xterm.js, and ConPTY</li><li>Windows-style shortcuts, trash, and permanent deletion</li><li>Cached shell icons and thumbnails</li><li>A multi-stage PDF preview pipeline</li></ul><a class="button" href="https://github.com/fukuyori/tfx-for-windows" target="_blank" rel="noreferrer">tfx for Windows ↗</a></article>
+          <article class="platform-card reveal"><div class="platform-card-top"><span>03</span><span>C++ / Qt</span></div><h3>Linux</h3><p>A Qt edition that brings the tfx workflow to Linux while respecting the differences of its desktop environments.</p><ul class="platform-points"><li>Dockable panes arranged for the task</li><li>In-place previews of file content</li><li>An integrated terminal connected to the working folder</li><li>A native desktop UI built with C++ and Qt</li></ul><a class="button" href="https://github.com/fukuyori/tfx-for-linux" target="_blank" rel="noreferrer">tfx for Linux ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-cta"><div class="product-shell reveal"><p class="section-kicker">Stay in your flow</p><h2>Make the next file move<br>a little shorter.</h2><p>Choose a repository to find releases and installation details for your operating system.</p><a class="button" href="#platforms">Choose your tfx</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>© <span data-year></span> Nor Fukuyori / SPUMONI.ORG</p><div class="footer-links"><a href="../">Home</a><a href="https://qiita.com/spumoni/items/9c7277d66e9d0ba8be15" target="_blank" rel="noreferrer">Original Qiita article ↗</a><a href="../../tfx/" lang="ja">日本語</a></div></div></footer>
+</body>
+</html>
