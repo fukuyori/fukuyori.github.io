@@ -1,6 +1,6 @@
 const apps = [
   {
-    name: "wtmux", symbol: ">_", version: "3.2.2", updated: "2026-08-06", language: "Rust",
+    name: "wtmux", symbol: ">_", version: "3.3.1", updated: "2026-08-21", language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#c9ff45",
     ja: "tmuxの操作感を、Windows・macOS・Linuxへ。ペイン、タブ、コピー、検索をひとつの端末で。",
     en: "A tmux-like terminal multiplexer for Windows, macOS, and Linux with panes, tabs, copy mode, and search."
@@ -12,31 +12,31 @@ const apps = [
     en: "A native Windows build of Gforth with no MSYS2 or MinGW runtime requirement."
   },
   {
-    name: "rakukan", symbol: "あ", version: "0.10.2", updated: "2026-08-04", language: "Rust",
+    name: "rakukan", symbol: "あ", version: "0.10.4", updated: "2026-08-21", language: "Rust",
     platforms: ["Windows"], filters: ["windows", "ai"], color: "#cbb7ff",
     ja: "小型ローカルLLMと辞書を組み合わせた、実験的なWindows向け日本語IME。",
     en: "An experimental Japanese IME for Windows combining a small local LLM with dictionary conversion."
   },
   {
-    name: "tfx", symbol: "//", version: "0.9.10", updated: "2026-07-26", language: "Swift",
+    name: "tfx", symbol: "//", version: "0.9.11", updated: "2026-08-18", language: "Swift",
     platforms: ["macOS"], filters: ["macos"], color: "#91c8ff",
     ja: "ターミナルに着想を得た、キーボード中心のmacOSファイルマネージャー。",
     en: "A keyboard-first macOS file manager with a terminal-inspired interface and workflow."
   },
   {
-    name: "tfx-for-windows", symbol: "C:\\", version: "0.9.16", updated: "2026-08-06", language: "C#",
+    name: "tfx-for-windows", symbol: "C:\\", version: "0.9.16", updated: "2026-08-21", language: "C#",
     platforms: ["Windows"], filters: ["windows"], color: "#91c8ff",
     ja: "分割ペイン、プレビュー、内蔵端末を備えたWindows向けtfx。",
     en: "The Windows edition of tfx, with split panes, rich previews, and a built-in terminal."
   },
   {
-    name: "tfx-for-linux", symbol: "~/", version: "0.8.3", updated: "2026-07-30", language: "C++ / Qt",
+    name: "tfx-for-linux", symbol: "~/", version: "0.8.3", updated: "2026-08-12", language: "C++ / Qt",
     platforms: ["Linux"], filters: ["linux"], color: "#91c8ff",
     ja: "ドッキング可能なペイン、プレビュー、内蔵端末を備えたLinux向けtfx。",
     en: "The Linux edition of tfx, with dockable panes, previews, and an integrated terminal."
   },
   {
-    name: "Spindle", symbol: "Aa", version: "0.7.3", updated: "2026-07-29", language: "C++ / Qt",
+    name: "Spindle", symbol: "Aa", version: "0.7.3", updated: "2026-08-21", language: "C++ / Qt",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading", "ai"], color: "#ff9c68",
     ja: "縦書き・固定レイアウト・ローカルAI翻訳に対応するネイティブEPUBリーダー。",
     en: "A native EPUB reader with vertical writing, fixed-layout support, and local AI translation."
@@ -60,7 +60,7 @@ const apps = [
     en: "A production tool that turns PDFs into searchable, selectable, and accessible EPUB 3 books."
   },
   {
-    name: "Mycel", symbol: "⌘", version: "0.9.4", updated: "2026-08-05", language: "C++ / Qt",
+    name: "Mycel", symbol: "⌘", version: "0.9.5", updated: "2026-08-08", language: "C++ / Qt",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "既存のフォルダとファイルをそのままノードとして扱うマインドマップツールです。独自形式への変換が不要なため、他のアプリケーションとの併用も容易です。将来的には、ファイルと処理をつなぐパイプライン用途への拡張も検討しています。",
     en: "A mind-mapping tool that treats existing folders and files as nodes without converting them to a proprietary format, making it easy to use alongside other applications. Future plans include exploring its use as a pipeline that connects files and processes."
@@ -72,13 +72,13 @@ const apps = [
     en: "A local-only utility for encrypting and decrypting Office, PDF, and ZIP files in batches."
   },
   {
-    name: "Tomatone", symbol: "25", version: "0.1.1", updated: "2026-07-28", language: "Go",
+    name: "Tomatone", symbol: "25", version: "0.1.2", updated: "2026-08-15", language: "Go",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#ff826f",
     ja: "YouTubeやインターネットラジオの環境音と作業する、CUIポモドーロタイマー。",
     en: "A CUI Pomodoro timer paired with ambience from YouTube and internet radio."
   },
   {
-    name: "SideBox", symbol: "☀", version: "0.1.5", updated: "2026-08-05", preRelease: true, language: "Go / Win32",
+    name: "SideBox", symbol: "☀", version: "0.2.1", updated: "2026-08-20", language: "Go / Win32",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "時計と気象庁の天気予報を静かに置ける、軽量デスクトップウィジェット。",
     en: "A lightweight desktop widget for a digital clock and Japan Meteorological Agency forecasts."
@@ -90,13 +90,13 @@ const apps = [
     en: "A resident utility that turns a touch-enabled secondary display into a touchpad for the main screen."
   },
   {
-    name: "AudioLens", symbol: "≈", version: "0.2.2", updated: "2026-08-06", language: "C++ / Qt",
+    name: "AudioLens", symbol: "≈", version: "0.5.0", updated: "2026-08-20", language: "C++ / Qt",
     platforms: ["Windows"], filters: ["windows"], color: "#cbb7ff",
     ja: "会話・講義・映画などに合わせてPC音声を聞き取りやすく整えるオーディオ補助アプリ。",
     en: "An audio accessibility tool that makes PC sound easier to hear with purpose-built presets."
   },
   {
-    name: "Gaze", repo: "gaze", symbol: "◉◉", version: "0.1.5", updated: "2026-08-02", language: "Rust / egui",
+    name: "Gaze", repo: "gaze", symbol: "◉◉", version: "0.2.1", updated: "2026-08-17", language: "Rust / egui",
     platforms: ["Windows"], filters: ["windows"], color: "#f8b8d0",
     ja: "マウスカーソルを目で追い、瞬きや休息もする、xeyes風のWindowsデスクトップアプリ。",
     en: "An expressive xeyes-style Windows desktop app that follows the cursor, blinks, rests, and sleeps."
@@ -108,25 +108,43 @@ const apps = [
     en: "A fast directory-jump command for Windows, macOS, and Linux: jump by keyword, not by path."
   },
   {
-    name: "Agent-Resume", symbol: "↻", version: "0.3.0", updated: "2026-07-24", language: "Go",
+    name: "Agent-Resume", symbol: "↻", version: "0.4.0", updated: "2026-08-20", language: "Go",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal", "ai"], color: "#cbb7ff",
     ja: "現在のディレクトリに関連する複数のCLIコーディングエージェントのセッションを探し、選んで再開するツール。",
     en: "A CLI for finding and resuming sessions from multiple coding agents associated with the current directory."
+  },
+  {
+    name: "TsubuGallery", symbol: "つ", version: "0.4.0", updated: "2026-08-19", language: "Rust",
+    platforms: ["Windows", "macOS", "Linux"], filters: ["cross"], color: "#f8b8d0",
+    ja: "つぶやきProcessingの短いスケッチを保存し、グリッドから選んで実行・鑑賞できるクロスプラットフォームギャラリー。",
+    en: "A cross-platform gallery for storing, running, and watching short Tsubuyaki Processing sketches."
+  },
+  {
+    name: "macos-drive-eject", symbol: "⏏", version: "0.2.1", updated: "2026-08-18", language: "Swift",
+    platforms: ["macOS"], filters: ["macos", "terminal"], color: "#91c8ff",
+    ja: "外付けドライブを対話形式またはコマンドから安全に取り出す、macOS向けターミナルアプリ。",
+    en: "A macOS terminal app for safely ejecting external drives interactively or from shell scripts."
   }
 ];
 
 const browserExtensions = [
   {
-    name: "YoutubeGrid", symbol: "▶", updated: "2026-08-06", language: "JavaScript",
+    name: "YoutubeGrid", symbol: "▶", version: "0.3.0", updated: "2026-08-06", language: "JavaScript",
     platforms: ["Firefox", "Chrome"], color: "#ff826f",
     ja: "YouTubeのグリッド列数や検索結果の表示を調整し、指定キーワード、Shorts、ゲームルームを非表示にする機能拡張。",
     en: "A browser extension for customizing YouTube grids and search results, with filters for keywords, Shorts, and Game Room sections."
   },
   {
-    name: "X-MaskWord", symbol: "X", updated: "2026-08-06", language: "JavaScript",
+    name: "X-MaskWord", symbol: "X", version: "0.2.0", updated: "2026-08-06", language: "JavaScript",
     platforms: ["Firefox"], color: "#91c8ff",
     ja: "指定した言葉や反応数を含むXの投稿・メッセージを非表示またはハイライトするFirefox機能拡張。",
     en: "A Firefox extension that hides or highlights X posts and messages based on configured words or engagement counts."
+  },
+  {
+    name: "MakeMarkdown", symbol: "M↓", version: "0.1.0", updated: "2026-08-18", language: "JavaScript",
+    platforms: ["Firefox", "Chrome"], color: "#a7e8cf",
+    ja: "表示中のWebページや選択範囲をMarkdownへ変換し、読みやすくプレビューして.mdファイルとして保存する機能拡張。",
+    en: "A browser extension that converts a page or selection to Markdown for focused reading and .md download."
   }
 ];
 
