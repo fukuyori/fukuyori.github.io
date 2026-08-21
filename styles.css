@@ -899,7 +899,7 @@ html[lang="ja"] .hero h1 {
   }
 
   html[lang="ja"] .hero h1 {
-    font-size: clamp(1.9rem, 7vw, 4.5rem);
+    font-size: clamp(1.9rem, 10.5vw, 4.5rem);
   }
 
   .hero-visual {
@@ -969,7 +969,7 @@ html[lang="ja"] .hero h1 {
   }
 
   html[lang="ja"] .hero h1 {
-    font-size: clamp(1.9rem, 7vw, 4.5rem);
+    font-size: clamp(1.9rem, 10.5vw, 4.5rem);
   }
 
   .hero-stats {
