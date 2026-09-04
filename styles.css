@@ -687,6 +687,26 @@ html[lang="ja"] .hero h1 {
   gap: 18px;
 }
 
+.forks {
+  background: #f1ebff;
+}
+
+.fork-card {
+  background: rgba(255, 253, 248, 0.66);
+}
+
+.app-origin {
+  align-self: flex-start;
+  margin-top: 18px;
+  padding: 5px 9px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.64rem;
+  font-weight: 800;
+}
+
 .extensions {
   background: #e7f0ff;
 }

@@ -6,12 +6,6 @@ const apps = [
     en: "A tmux-like terminal multiplexer for Windows, macOS, and Linux with panes, tabs, copy mode, and search."
   },
   {
-    name: "Gforth for Windows", repo: "gforth_for_windows", symbol: "F>", version: "0.7.9_20260708+fukuyori.3.1", updated: "2026-08-01", stars: 1, forks: 0, language: "Forth",
-    platforms: ["Windows"], filters: ["windows", "terminal"], color: "#c9ff45",
-    ja: "MSYS2やMinGWのランタイムを必要とせず、Windows上でネイティブに動作するGforth。",
-    en: "A native Windows build of Gforth with no MSYS2 or MinGW runtime requirement."
-  },
-  {
     name: "rakukan", symbol: "あ", version: "0.10.4", updated: "2026-08-21", stars: 29, forks: 3, language: "Rust",
     platforms: ["Windows"], filters: ["windows", "ai"], color: "#cbb7ff",
     ja: "小型ローカルLLMと辞書を組み合わせた、実験的なWindows向け日本語IME。",
@@ -127,6 +121,39 @@ const apps = [
   }
 ];
 
+const forkedApps = [
+  {
+    name: "terminal-browser", symbol: "TB", version: "0.5.8-win.1", updated: "2026-09-04", stars: 0, forks: 0, language: "Rust",
+    platforms: ["Windows"], color: "#c9ff45", upstream: "zenbu-labs/terminal-browser",
+    ja: "ターミナルの中で動くブラウザーに、Windowsネイティブ対応を加えたフォーク。",
+    en: "A fork of the browser that runs inside a terminal, extended with native Windows support."
+  },
+  {
+    name: "terminal-code", symbol: "</>", version: "0.3.4-win.1", updated: "2026-09-04", stars: 0, forks: 0, language: "TypeScript",
+    platforms: ["Windows"], color: "#91c8ff", upstream: "zenbu-labs/terminal-code",
+    ja: "ターミナル内でVS Codeを使うプロジェクトに、Windows対応を加えたフォーク。",
+    en: "A fork for running VS Code inside a terminal, extended with Windows support."
+  },
+  {
+    name: "karukan-feat-rakukan", symbol: "あ+", version: "0.1.0-rakukan.4", updated: "2026-08-27", stars: 0, forks: 0, language: "Rust",
+    platforms: ["Linux", "macOS"], color: "#cbb7ff", upstream: "togatoga/karukan",
+    ja: "Linux・macOS向け日本語入力システムkarukanで、rakukan系のかな漢字変換を試す派生版。",
+    en: "A karukan fork exploring rakukan-style neural kana-to-kanji conversion on Linux and macOS."
+  },
+  {
+    name: "Gforth for Windows", repo: "gforth_for_windows", symbol: "F>", version: "0.7.9_20260708+fukuyori.3.1", updated: "2026-08-01", stars: 1, forks: 0, language: "Forth",
+    platforms: ["Windows"], color: "#c9ff45", upstream: "forthy42/gforth",
+    ja: "MSYS2やMinGWのランタイムを必要とせず、Windows上でネイティブに動作するGforth。",
+    en: "A native Windows build of Gforth with no MSYS2 or MinGW runtime requirement."
+  },
+  {
+    name: "sorcery", symbol: "W!", updated: "2026-05-12", stars: 0, forks: 0, language: "C++ / SDL2",
+    platforms: ["Windows", "Linux"], color: "#ff9c68", upstream: "davemoore22/sorcery",
+    ja: "古典CRPG『Wizardry』のオープンソース・リメイクを追随し、UI調整を加えたフォーク。",
+    en: "A fork of the open-source Wizardry remake, tracking its SDL/ImGui work with additional UI refinements."
+  }
+];
+
 const browserExtensions = [
   {
     name: "YoutubeGrid", symbol: "▶", version: "0.3.0", updated: "2026-08-06", stars: 0, forks: 0, language: "JavaScript",
@@ -150,6 +177,7 @@ const browserExtensions = [
 
 const lang = document.documentElement.lang === "en" ? "en" : "ja";
 const grid = document.querySelector("[data-app-grid]");
+const forkGrid = document.querySelector("[data-fork-grid]");
 const extensionGrid = document.querySelector("[data-extension-grid]");
 const count = document.querySelector("[data-catalog-count]");
 
@@ -164,9 +192,12 @@ function cardMarkup(app, includeFilters = false) {
   const forksLabel = lang === "ja" ? `GitHubフォーク ${app.forks}` : `${app.forks} GitHub forks`;
   const repo = app.repo || app.name;
   const label = lang === "ja" ? `${app.name}のGitHubリポジトリを開く` : `Open the ${app.name} GitHub repository`;
+  const origin = app.upstream
+    ? `<span class="app-origin">${lang === "ja" ? "フォーク元" : "Fork of"}: ${app.upstream}</span>`
+    : "";
 
   return `
-    <a class="app-card reveal" href="https://github.com/fukuyori/${repo}" target="_blank" rel="noreferrer"${filterList}
+    <a class="app-card${app.upstream ? " fork-card" : ""} reveal" href="https://github.com/fukuyori/${repo}" target="_blank" rel="noreferrer"${filterList}
        aria-label="${label}" style="--card-accent:${app.color}">
       <div class="app-card-header">
         <span class="app-symbol" aria-hidden="true">${app.symbol}</span>
@@ -175,6 +206,7 @@ function cardMarkup(app, includeFilters = false) {
           <time class="app-updated" datetime="${app.updated}" title="${updatedLabel}">${app.updated}</time>
         </span>
       </div>
+      ${origin}
       <h3>${app.name}</h3>
       <p>${app[lang]}</p>
       <div class="app-meta">${meta}</div>
@@ -183,6 +215,12 @@ function cardMarkup(app, includeFilters = false) {
         <span title="${forksLabel}" aria-label="${forksLabel}"><span aria-hidden="true">⑂</span> ${app.forks}</span>
       </div>
     </a>`;
+}
+
+function renderForkedApps() {
+  if (!forkGrid) return;
+  forkGrid.innerHTML = forkedApps.map((app) => cardMarkup(app)).join("");
+  observeReveals();
 }
 
 function renderApps() {
@@ -254,5 +292,6 @@ document.querySelectorAll("[data-year]").forEach((item) => {
 });
 
 renderApps();
+renderForkedApps();
 renderBrowserExtensions();
 observeReveals();
