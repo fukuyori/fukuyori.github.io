@@ -36,6 +36,12 @@ const apps = [
     en: "A tray-resident Windows utility for moving any window with a middle-button drag and resizing it with Shift + middle drag."
   },
   {
+    name: "alt-henkan", symbol: "Alt", version: "0.1.0", updated: "2026-09-11", stars: 0, forks: 0, language: "C# / WinForms",
+    platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
+    ja: "Alt Henkan は、英語キーボードで左右の Alt キーをIMEのオフ・オンにするWindows の常駐アプリです。",
+    en: "A Windows tray app that maps taps of the left and right Alt keys to IME off and on while preserving configurable long-press Alt behavior."
+  },
+  {
     name: "Spindle", symbol: "Aa", version: "0.8.1", updated: "2026-09-08", stars: 6, forks: 0, language: "C++ / Qt",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading", "ai"], color: "#ff9c68",
     ja: "縦書き・固定レイアウト・ローカルAI翻訳に対応するネイティブEPUBリーダー。",
