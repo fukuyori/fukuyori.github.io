@@ -1,12 +1,12 @@
 const apps = [
   {
-    name: "wtmux", symbol: ">_", version: "3.3.1", updated: "2026-08-21", stars: 44, forks: 4, language: "Rust",
+    name: "wtmux", symbol: ">_", version: "3.5.1", updated: "2026-09-07", stars: 46, forks: 4, language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#c9ff45",
     ja: "tmuxの操作感を、Windows・macOS・Linuxへ。ペイン、タブ、コピー、検索をひとつの端末で。",
     en: "A tmux-like terminal multiplexer for Windows, macOS, and Linux with panes, tabs, copy mode, and search."
   },
   {
-    name: "rakukan", symbol: "あ", version: "0.10.4", updated: "2026-08-21", stars: 29, forks: 3, language: "Rust",
+    name: "rakukan", symbol: "あ", version: "0.11.4", updated: "2026-09-09", stars: 31, forks: 5, language: "Rust",
     platforms: ["Windows"], filters: ["windows", "ai"], color: "#cbb7ff",
     ja: "小型ローカルLLMと辞書を組み合わせた、実験的なWindows向け日本語IME。",
     en: "An experimental Japanese IME for Windows combining a small local LLM with dictionary conversion."
@@ -18,43 +18,55 @@ const apps = [
     en: "A keyboard-first macOS file manager with a terminal-inspired interface and workflow."
   },
   {
-    name: "tfx-for-windows", symbol: "C:\\", version: "0.9.16", updated: "2026-08-21", stars: 21, forks: 0, language: "C#",
+    name: "tfx-for-windows", symbol: "C:\\", version: "0.9.18", updated: "2026-09-07", stars: 21, forks: 0, language: "C#",
     platforms: ["Windows"], filters: ["windows"], color: "#91c8ff",
     ja: "分割ペイン、プレビュー、内蔵端末を備えたWindows向けtfx。",
     en: "The Windows edition of tfx, with split panes, rich previews, and a built-in terminal."
   },
   {
-    name: "tfx-for-linux", symbol: "~/", version: "0.8.3", updated: "2026-08-12", stars: 0, forks: 0, language: "C++ / Qt",
+    name: "tfx-for-linux", symbol: "~/", version: "0.8.8", updated: "2026-09-09", stars: 0, forks: 0, language: "C++ / Qt",
     platforms: ["Linux"], filters: ["linux"], color: "#91c8ff",
     ja: "ドッキング可能なペイン、プレビュー、内蔵端末を備えたLinux向けtfx。",
     en: "The Linux edition of tfx, with dockable panes, previews, and an integrated terminal."
   },
   {
-    name: "Spindle", symbol: "Aa", version: "0.7.3", updated: "2026-08-21", stars: 4, forks: 0, language: "C++ / Qt",
+    name: "wmv", symbol: "↔", version: "0.7.1", updated: "2026-09-09", stars: 0, forks: 0, language: "C# / WinForms",
+    platforms: ["Windows"], filters: ["windows"], color: "#a7e8cf",
+    ja: "中ボタンドラッグで任意のウィンドウを移動し、Shift＋中ボタンドラッグでサイズ変更できるWindows常駐ツール。",
+    en: "A tray-resident Windows utility for moving any window with a middle-button drag and resizing it with Shift + middle drag."
+  },
+  {
+    name: "Spindle", symbol: "Aa", version: "0.8.1", updated: "2026-09-08", stars: 6, forks: 0, language: "C++ / Qt",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading", "ai"], color: "#ff9c68",
     ja: "縦書き・固定レイアウト・ローカルAI翻訳に対応するネイティブEPUBリーダー。",
     en: "A native EPUB reader with vertical writing, fixed-layout support, and local AI translation."
   },
   {
-    name: "mdv", symbol: "#", version: "0.5.3", updated: "2026-08-06", stars: 0, forks: 0, language: "C++ / Qt",
+    name: "mdv", symbol: "#", version: "0.6.6", updated: "2026-09-01", stars: 0, forks: 0, language: "C++ / Qt",
     platforms: ["Windows", "macOS"], filters: ["cross", "reading"], color: "#a7e8cf",
     ja: "書く画面と読む画面を軽快に行き来できる、シンプルなMarkdownビューアー／エディター。",
     en: "A focused Markdown viewer and editor for moving fluidly between writing and reading."
   },
   {
-    name: "pdr", symbol: "PDF", version: "0.1.8", updated: "2026-07-23", stars: 0, forks: 0, language: "Rust / egui",
+    name: "pdr", symbol: "PDF", version: "0.2.1", updated: "2026-09-06", stars: 0, forks: 0, language: "Rust / egui",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading"], color: "#ff9c68",
     ja: "見開き、左右綴じ、目次、画像補正、適応解像度レンダリングに対応する軽快なPDFリーダー。",
     en: "A responsive PDF reader with spreads, left/right binding, outlines, image correction, and adaptive rendering."
   },
   {
-    name: "EpubFabric", symbol: "▤", version: "0.2.3", updated: "2026-07-28", stars: 2, forks: 0, language: "C#",
+    name: "EpubFabric", symbol: "▤", version: "0.4.0", updated: "2026-09-07", stars: 2, forks: 0, language: "C#",
     platforms: ["Windows"], filters: ["windows", "reading", "ai"], color: "#f8b8d0",
     ja: "PDFを、検索・選択・読み上げ可能なEPUB 3へ変換する制作環境。",
     en: "A production tool that turns PDFs into searchable, selectable, and accessible EPUB 3 books."
   },
   {
-    name: "Mycel", symbol: "⌘", version: "0.9.5", updated: "2026-08-08", stars: 1, forks: 0, language: "C++ / Qt",
+    name: "zmachine-multilingual", symbol: "Z>", version: "0.5.4", updated: "2026-09-05", stars: 1, forks: 0, language: "Common Lisp",
+    platforms: ["Terminal"], filters: ["terminal", "reading", "ai"], color: "#cbb7ff",
+    ja: "Z-machine 1～8対応のCommon Lisp製テキストアドベンチャー・インタープリター。ローカルLLMなどによる10言語の対訳表示に対応。",
+    en: "A Common Lisp Z-machine interpreter for versions 1–8, with bilingual play in 10 languages through local LLM and API translation."
+  },
+  {
+    name: "Mycel", symbol: "⌘", version: "0.10.1", updated: "2026-09-07", stars: 1, forks: 0, language: "C++ / Qt",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "既存のフォルダとファイルをそのままノードとして扱うマインドマップツールです。独自形式への変換が不要なため、他のアプリケーションとの併用も容易です。将来的には、ファイルと処理をつなぐパイプライン用途への拡張も検討しています。",
     en: "A mind-mapping tool that treats existing folders and files as nodes without converting them to a proprietary format, making it easy to use alongside other applications. Future plans include exploring its use as a pipeline that connects files and processes."
@@ -72,13 +84,13 @@ const apps = [
     en: "A CUI Pomodoro timer paired with ambience from YouTube and internet radio."
   },
   {
-    name: "SideBox", symbol: "☀", version: "0.2.1", updated: "2026-08-20", stars: 0, forks: 0, language: "Go / Win32",
+    name: "SideBox", symbol: "☀", version: "0.3.2", updated: "2026-08-26", stars: 0, forks: 0, language: "Go / Win32",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "時計と気象庁の天気予報を静かに置ける、軽量デスクトップウィジェット。",
     en: "A lightweight desktop widget for a digital clock and Japan Meteorological Agency forecasts."
   },
   {
-    name: "VirtualTouchpadEngine", symbol: "↗", version: "0.2.6", updated: "2026-08-04", stars: 0, forks: 0, preRelease: true, language: "Rust",
+    name: "VirtualTouchpadEngine", symbol: "↗", version: "0.3.0", updated: "2026-08-26", stars: 0, forks: 0, preRelease: true, language: "Rust",
     platforms: ["Windows"], filters: ["windows"], color: "#a7e8cf",
     ja: "タッチ対応サブモニターを、メイン画面用の仮想タッチパッドへ変える常駐ツール。",
     en: "A resident utility that turns a touch-enabled secondary display into a touchpad for the main screen."
@@ -96,25 +108,25 @@ const apps = [
     en: "An expressive xeyes-style Windows desktop app that follows the cursor, blinks, rests, and sleeps."
   },
   {
-    name: "j-cmd", symbol: "j>", version: "2.2.1", updated: "2026-07-31", stars: 1, forks: 0, language: "Rust",
+    name: "j-cmd", symbol: "j>", version: "2.2.1", updated: "2026-09-09", stars: 1, forks: 0, language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#c9ff45",
     ja: "パスではなくキーワードで移動する、Windows・macOS・Linux向けの高速ディレクトリジャンプコマンド。",
     en: "A fast directory-jump command for Windows, macOS, and Linux: jump by keyword, not by path."
   },
   {
-    name: "Agent-Resume", symbol: "↻", version: "0.4.0", updated: "2026-08-20", stars: 0, forks: 0, language: "Go",
+    name: "Agent-Resume", symbol: "↻", version: "0.5.1", updated: "2026-09-01", stars: 0, forks: 0, language: "Go",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal", "ai"], color: "#cbb7ff",
     ja: "現在のディレクトリに関連する複数のCLIコーディングエージェントのセッションを探し、選んで再開するツール。",
     en: "A CLI for finding and resuming sessions from multiple coding agents associated with the current directory."
   },
   {
-    name: "TsubuGallery", symbol: "つ", version: "0.4.0", updated: "2026-08-19", stars: 0, forks: 0, language: "Rust",
+    name: "TsubuGallery", symbol: "つ", version: "0.6.3", updated: "2026-09-09", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross"], color: "#f8b8d0",
     ja: "つぶやきProcessingの短いスケッチを保存し、グリッドから選んで実行・鑑賞できるクロスプラットフォームギャラリー。",
     en: "A cross-platform gallery for storing, running, and watching short Tsubuyaki Processing sketches."
   },
   {
-    name: "macos-drive-eject", symbol: "⏏", version: "0.2.1", updated: "2026-08-18", stars: 0, forks: 0, language: "Swift",
+    name: "macos-drive-eject", symbol: "⏏", version: "0.3.0", updated: "2026-09-07", stars: 0, forks: 0, language: "Swift",
     platforms: ["macOS"], filters: ["macos", "terminal"], color: "#91c8ff",
     ja: "外付けドライブを対話形式またはコマンドから安全に取り出す、macOS向けターミナルアプリ。",
     en: "A macOS terminal app for safely ejecting external drives interactively or from shell scripts."
@@ -135,7 +147,7 @@ const forkedApps = [
     en: "A fork for running VS Code inside a terminal, extended with Windows support."
   },
   {
-    name: "karukan-feat-rakukan", symbol: "あ+", version: "0.1.0-rakukan.4", updated: "2026-08-27", stars: 0, forks: 0, language: "Rust",
+    name: "karukan-feat-rakukan", symbol: "あ+", version: "0.1.0-rakukan.5", updated: "2026-09-09", stars: 0, forks: 0, language: "Rust",
     platforms: ["Linux", "macOS"], color: "#cbb7ff", upstream: "togatoga/karukan",
     ja: "Linux・macOS向け日本語入力システムkarukanで、rakukan系のかな漢字変換を試す派生版。",
     en: "A karukan fork exploring rakukan-style neural kana-to-kanji conversion on Linux and macOS."
@@ -147,7 +159,7 @@ const forkedApps = [
     en: "A native Windows build of Gforth with no MSYS2 or MinGW runtime requirement."
   },
   {
-    name: "sorcery", symbol: "W!", updated: "2026-05-12", stars: 0, forks: 0, language: "C++ / SDL2",
+    name: "sorcery", symbol: "W!", updated: "2026-09-04", stars: 0, forks: 0, language: "C++ / SDL2",
     platforms: ["Windows", "Linux"], color: "#ff9c68", upstream: "davemoore22/sorcery",
     ja: "古典CRPG『Wizardry』のオープンソース・リメイクを追随し、UI調整を加えたフォーク。",
     en: "A fork of the open-source Wizardry remake, tracking its SDL/ImGui work with additional UI refinements."
