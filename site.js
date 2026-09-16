@@ -141,6 +141,12 @@ const apps = [
 
 const forkedApps = [
   {
+    name: "Ghostty for Windows", repo: "ghostty", symbol: "G>", version: "1.3.2-windows.4", updated: "2026-09-16", stars: 0, forks: 0, language: "Zig",
+    platforms: ["Windows"], color: "#c9ff45", upstream: "ghostty-org/ghostty",
+    ja: "Ghosttyに、Win32、D3D11、ネイティブタブ、分割ペインを備えたWindowsネイティブ対応を加える開発フォーク。",
+    en: "A development fork bringing Ghostty to Windows with native Win32 windows, D3D11 rendering, tabs, and split panes."
+  },
+  {
     name: "terminal-browser", symbol: "TB", version: "0.5.8-win.1", updated: "2026-09-04", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows"], color: "#c9ff45", upstream: "zenbu-labs/terminal-browser",
     ja: "ターミナルの中で動くブラウザーに、Windowsネイティブ対応を加えたフォーク。",
