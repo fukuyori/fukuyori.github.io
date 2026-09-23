@@ -1,12 +1,12 @@
 const apps = [
   {
-    name: "wtmux", symbol: ">_", version: "3.5.1", updated: "2026-09-07", stars: 46, forks: 4, language: "Rust",
+    name: "wtmux", symbol: ">_", version: "4.0.2", updated: "2026-09-14", stars: 47, forks: 4, language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#c9ff45",
     ja: "tmuxの操作感を、Windows・macOS・Linuxへ。ペイン、タブ、コピー、検索をひとつの端末で。",
     en: "A tmux-like terminal multiplexer for Windows, macOS, and Linux with panes, tabs, copy mode, and search."
   },
   {
-    name: "rakukan", symbol: "あ", version: "0.11.4", updated: "2026-09-09", stars: 31, forks: 5, language: "Rust",
+    name: "rakukan", symbol: "あ", version: "0.11.7", updated: "2026-09-22", stars: 34, forks: 7, language: "Rust",
     platforms: ["Windows"], filters: ["windows", "ai"], color: "#cbb7ff",
     ja: "小型ローカルLLMと辞書を組み合わせた、実験的なWindows向け日本語IME。",
     en: "An experimental Japanese IME for Windows combining a small local LLM with dictionary conversion."
@@ -30,16 +30,22 @@ const apps = [
     en: "The Linux edition of tfx, with dockable panes, previews, and an integrated terminal."
   },
   {
-    name: "wmv", symbol: "↔", version: "0.7.1", updated: "2026-09-09", stars: 0, forks: 0, language: "C# / WinForms",
+    name: "wmv", symbol: "↔", version: "0.7.1", updated: "2026-09-10", stars: 0, forks: 0, language: "C# / WinForms",
     platforms: ["Windows"], filters: ["windows"], color: "#a7e8cf",
     ja: "中ボタンドラッグで任意のウィンドウを移動し、Shift＋中ボタンドラッグでサイズ変更できるWindows常駐ツール。",
     en: "A tray-resident Windows utility for moving any window with a middle-button drag and resizing it with Shift + middle drag."
   },
   {
-    name: "alt-henkan", symbol: "Alt", version: "0.1.0", updated: "2026-09-11", stars: 0, forks: 0, language: "C# / WinForms",
+    name: "alt-henkan", symbol: "Alt", version: "0.3.3", updated: "2026-09-20", stars: 0, forks: 0, language: "C# / WinForms",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "Alt Henkan は、英語キーボードで左右の Alt キーをIMEのオフ・オンにするWindows の常駐アプリです。",
     en: "A Windows tray app that maps taps of the left and right Alt keys to IME off and on while preserving configurable long-press Alt behavior."
+  },
+  {
+    name: "alt-henkan-linux", symbol: "Alt", version: "0.1.0", updated: "2026-09-21", stars: 0, forks: 0, language: "Rust / GTK 4",
+    platforms: ["Linux"], filters: ["linux"], color: "#ffda72",
+    ja: "英語キーボードの左右AltキーでIMEをオフ・オンにし、ウィンドウ移動やEmacs操作にも対応するLinux常駐アプリ。",
+    en: "A Linux resident app that maps the left and right Alt keys to IME off and on, with window movement and Emacs-style shortcuts."
   },
   {
     name: "Spindle", symbol: "Aa", version: "0.8.1", updated: "2026-09-08", stars: 6, forks: 0, language: "C++ / Qt",
@@ -48,7 +54,7 @@ const apps = [
     en: "A native EPUB reader with vertical writing, fixed-layout support, and local AI translation."
   },
   {
-    name: "mdv", symbol: "#", version: "0.6.6", updated: "2026-09-01", stars: 0, forks: 0, language: "C++ / Qt",
+    name: "mdv", symbol: "#", version: "0.6.7", updated: "2026-09-16", stars: 0, forks: 0, language: "C++ / Qt",
     platforms: ["Windows", "macOS"], filters: ["cross", "reading"], color: "#a7e8cf",
     ja: "書く画面と読む画面を軽快に行き来できる、シンプルなMarkdownビューアー／エディター。",
     en: "A focused Markdown viewer and editor for moving fluidly between writing and reading."
@@ -60,7 +66,7 @@ const apps = [
     en: "A responsive PDF reader with spreads, left/right binding, outlines, image correction, and adaptive rendering."
   },
   {
-    name: "EpubFabric", symbol: "▤", version: "0.4.0", updated: "2026-09-07", stars: 2, forks: 0, language: "C#",
+    name: "EpubFabric", symbol: "▤", version: "0.4.0", updated: "2026-09-13", stars: 2, forks: 0, language: "C#",
     platforms: ["Windows"], filters: ["windows", "reading", "ai"], color: "#f8b8d0",
     ja: "PDFを、検索・選択・読み上げ可能なEPUB 3へ変換する制作環境。",
     en: "A production tool that turns PDFs into searchable, selectable, and accessible EPUB 3 books."
@@ -84,7 +90,7 @@ const apps = [
     en: "A local-only utility for encrypting and decrypting Office, PDF, and ZIP files in batches."
   },
   {
-    name: "Tomatone", symbol: "25", version: "0.1.2", updated: "2026-08-15", stars: 0, forks: 0, language: "Go",
+    name: "Tomatone", symbol: "25", version: "0.2.1", updated: "2026-09-14", stars: 0, forks: 0, language: "Go",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#ff826f",
     ja: "YouTubeやインターネットラジオの環境音と作業する、CUIポモドーロタイマー。",
     en: "A CUI Pomodoro timer paired with ambience from YouTube and internet radio."
@@ -96,7 +102,7 @@ const apps = [
     en: "A lightweight desktop widget for a digital clock and Japan Meteorological Agency forecasts."
   },
   {
-    name: "VirtualTouchpadEngine", symbol: "↗", version: "0.3.0", updated: "2026-08-26", stars: 0, forks: 0, preRelease: true, language: "Rust",
+    name: "VirtualTouchpadEngine", symbol: "↗", version: "0.4.0", updated: "2026-09-11", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows"], filters: ["windows"], color: "#a7e8cf",
     ja: "タッチ対応サブモニターを、メイン画面用の仮想タッチパッドへ変える常駐ツール。",
     en: "A resident utility that turns a touch-enabled secondary display into a touchpad for the main screen."
@@ -120,7 +126,7 @@ const apps = [
     en: "A fast directory-jump command for Windows, macOS, and Linux: jump by keyword, not by path."
   },
   {
-    name: "Agent-Resume", symbol: "↻", version: "0.5.1", updated: "2026-09-01", stars: 0, forks: 0, language: "Go",
+    name: "Agent-Resume", symbol: "↻", version: "0.5.2", updated: "2026-09-12", stars: 0, forks: 0, language: "Go",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal", "ai"], color: "#cbb7ff",
     ja: "現在のディレクトリに関連する複数のCLIコーディングエージェントのセッションを探し、選んで再開するツール。",
     en: "A CLI for finding and resuming sessions from multiple coding agents associated with the current directory."
@@ -141,13 +147,13 @@ const apps = [
 
 const forkedApps = [
   {
-    name: "Ghostty for Windows", repo: "ghostty", symbol: "G>", version: "1.3.2-windows.4", updated: "2026-09-16", stars: 0, forks: 0, language: "Zig",
+    name: "Ghostty for Windows", repo: "ghostty", symbol: "G>", version: "1.3.2-windows.11", updated: "2026-09-22", stars: 1, forks: 0, language: "Zig",
     platforms: ["Windows"], color: "#c9ff45", upstream: "ghostty-org/ghostty",
     ja: "Ghosttyに、Win32、D3D11、ネイティブタブ、分割ペインを備えたWindowsネイティブ対応を加える開発フォーク。",
     en: "A development fork bringing Ghostty to Windows with native Win32 windows, D3D11 rendering, tabs, and split panes."
   },
   {
-    name: "terminal-browser", symbol: "TB", version: "0.5.8-win.1", updated: "2026-09-04", stars: 0, forks: 0, language: "Rust",
+    name: "terminal-browser", symbol: "TB", version: "0.11.1-win.1", updated: "2026-09-21", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows"], color: "#c9ff45", upstream: "zenbu-labs/terminal-browser",
     ja: "ターミナルの中で動くブラウザーに、Windowsネイティブ対応を加えたフォーク。",
     en: "A fork of the browser that runs inside a terminal, extended with native Windows support."
@@ -159,7 +165,7 @@ const forkedApps = [
     en: "A fork for running VS Code inside a terminal, extended with Windows support."
   },
   {
-    name: "karukan-feat-rakukan", symbol: "あ+", version: "0.1.0-rakukan.5", updated: "2026-09-09", stars: 0, forks: 0, language: "Rust",
+    name: "karukan-feat-rakukan", symbol: "あ+", version: "0.1.0-rakukan.6", updated: "2026-09-22", stars: 0, forks: 0, language: "Rust",
     platforms: ["Linux", "macOS"], color: "#cbb7ff", upstream: "togatoga/karukan",
     ja: "Linux・macOS向け日本語入力システムkarukanで、rakukan系のかな漢字変換を試す派生版。",
     en: "A karukan fork exploring rakukan-style neural kana-to-kanji conversion on Linux and macOS."
