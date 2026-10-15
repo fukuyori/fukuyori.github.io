@@ -1,30 +1,30 @@
 const apps = [
   {
-    name: "wtmux", symbol: ">_", version: "4.0.2", updated: "2026-09-14", stars: 47, forks: 4, language: "Rust",
+    name: "wtmux", symbol: ">_", version: "4.1.0", updated: "2026-10-01", stars: 47, forks: 4, language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal"], color: "#c9ff45",
     ja: "tmuxの操作感を、Windows・macOS・Linuxへ。ペイン、タブ、コピー、検索をひとつの端末で。",
     en: "A tmux-like terminal multiplexer for Windows, macOS, and Linux with panes, tabs, copy mode, and search."
   },
   {
-    name: "rakukan", symbol: "あ", version: "0.11.7", updated: "2026-09-22", stars: 34, forks: 7, language: "Rust",
+    name: "rakukan", symbol: "あ", version: "0.12.0", updated: "2026-10-11", stars: 40, forks: 7, language: "Rust",
     platforms: ["Windows"], filters: ["windows", "ai"], color: "#cbb7ff",
     ja: "小型ローカルLLMと辞書を組み合わせた、実験的なWindows向け日本語IME。",
     en: "An experimental Japanese IME for Windows combining a small local LLM with dictionary conversion."
   },
   {
-    name: "tfx", symbol: "//", version: "0.9.11", updated: "2026-08-18", stars: 25, forks: 0, language: "Swift",
+    name: "tfx", symbol: "//", version: "0.10.2", updated: "2026-10-05", stars: 25, forks: 0, language: "Swift",
     platforms: ["macOS"], filters: ["macos"], color: "#91c8ff",
     ja: "ターミナルに着想を得た、キーボード中心のmacOSファイルマネージャー。",
     en: "A keyboard-first macOS file manager with a terminal-inspired interface and workflow."
   },
   {
-    name: "tfx-for-windows", symbol: "C:\\", version: "0.9.18", updated: "2026-09-07", stars: 21, forks: 0, language: "C#",
+    name: "tfx-for-windows", symbol: "C:\\", version: "0.10.1", updated: "2026-10-05", stars: 22, forks: 0, language: "C#",
     platforms: ["Windows"], filters: ["windows"], color: "#91c8ff",
     ja: "分割ペイン、プレビュー、内蔵端末を備えたWindows向けtfx。",
     en: "The Windows edition of tfx, with split panes, rich previews, and a built-in terminal."
   },
   {
-    name: "tfx-for-linux", symbol: "~/", version: "0.8.8", updated: "2026-09-09", stars: 0, forks: 0, language: "C++ / Qt",
+    name: "tfx-for-linux", symbol: "~/", version: "0.9.0", updated: "2026-10-02", stars: 0, forks: 0, language: "C++ / Qt",
     platforms: ["Linux"], filters: ["linux"], color: "#91c8ff",
     ja: "ドッキング可能なペイン、プレビュー、内蔵端末を備えたLinux向けtfx。",
     en: "The Linux edition of tfx, with dockable panes, previews, and an integrated terminal."
@@ -36,7 +36,7 @@ const apps = [
     en: "A tray-resident Windows utility for moving any window with a middle-button drag and resizing it with Shift + middle drag."
   },
   {
-    name: "alt-henkan", symbol: "Alt", version: "0.3.3", updated: "2026-09-20", stars: 0, forks: 0, language: "C# / WinForms",
+    name: "alt-henkan", symbol: "Alt", version: "0.4.2", updated: "2026-10-11", stars: 0, forks: 0, language: "C# / WinForms",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "Alt Henkan は、英語キーボードで左右の Alt キーをIMEのオフ・オンにするWindows の常駐アプリです。",
     en: "A Windows tray app that maps taps of the left and right Alt keys to IME off and on while preserving configurable long-press Alt behavior."
@@ -48,19 +48,19 @@ const apps = [
     en: "A Linux resident app that maps the left and right Alt keys to IME off and on, with window movement and Emacs-style shortcuts."
   },
   {
-    name: "Spindle", symbol: "Aa", version: "0.8.1", updated: "2026-09-08", stars: 6, forks: 0, language: "C++ / Qt",
+    name: "Spindle", symbol: "Aa", version: "0.9.0", updated: "2026-09-30", stars: 7, forks: 0, language: "C++ / Qt",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading", "ai"], color: "#ff9c68",
     ja: "縦書き・固定レイアウト・ローカルAI翻訳に対応するネイティブEPUBリーダー。",
     en: "A native EPUB reader with vertical writing, fixed-layout support, and local AI translation."
   },
   {
-    name: "mdv", symbol: "#", version: "0.6.7", updated: "2026-09-16", stars: 0, forks: 0, language: "C++ / Qt",
+    name: "mdv", symbol: "#", version: "0.7.0", updated: "2026-10-02", stars: 0, forks: 0, language: "C++ / Qt",
     platforms: ["Windows", "macOS"], filters: ["cross", "reading"], color: "#a7e8cf",
     ja: "書く画面と読む画面を軽快に行き来できる、シンプルなMarkdownビューアー／エディター。",
     en: "A focused Markdown viewer and editor for moving fluidly between writing and reading."
   },
   {
-    name: "pdr", symbol: "PDF", version: "0.2.1", updated: "2026-09-06", stars: 0, forks: 0, language: "Rust / egui",
+    name: "pdr", symbol: "PDF", version: "0.3.0", updated: "2026-10-05", stars: 0, forks: 0, language: "Rust / egui",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "reading"], color: "#ff9c68",
     ja: "見開き、左右綴じ、目次、画像補正、適応解像度レンダリングに対応する軽快なPDFリーダー。",
     en: "A responsive PDF reader with spreads, left/right binding, outlines, image correction, and adaptive rendering."
@@ -78,7 +78,7 @@ const apps = [
     en: "A Common Lisp Z-machine interpreter for versions 1–8, with bilingual play in 10 languages through local LLM and API translation."
   },
   {
-    name: "Mycel", symbol: "⌘", version: "0.10.1", updated: "2026-09-07", stars: 1, forks: 0, language: "C++ / Qt",
+    name: "Mycel", symbol: "⌘", version: "0.11.0", updated: "2026-10-02", stars: 2, forks: 0, language: "C++ / Qt",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "既存のフォルダとファイルをそのままノードとして扱うマインドマップツールです。独自形式への変換が不要なため、他のアプリケーションとの併用も容易です。将来的には、ファイルと処理をつなぐパイプライン用途への拡張も検討しています。",
     en: "A mind-mapping tool that treats existing folders and files as nodes without converting them to a proprietary format, making it easy to use alongside other applications. Future plans include exploring its use as a pipeline that connects files and processes."
@@ -96,13 +96,13 @@ const apps = [
     en: "A CUI Pomodoro timer paired with ambience from YouTube and internet radio."
   },
   {
-    name: "SideBox", symbol: "☀", version: "0.3.2", updated: "2026-08-26", stars: 0, forks: 0, language: "Go / Win32",
+    name: "SideBox", symbol: "☀", version: "0.4.0", updated: "2026-09-30", stars: 0, forks: 0, language: "Go / Win32",
     platforms: ["Windows"], filters: ["windows"], color: "#ffda72",
     ja: "時計と気象庁の天気予報を静かに置ける、軽量デスクトップウィジェット。",
     en: "A lightweight desktop widget for a digital clock and Japan Meteorological Agency forecasts."
   },
   {
-    name: "VirtualTouchpadEngine", symbol: "↗", version: "0.4.0", updated: "2026-09-11", stars: 0, forks: 0, language: "Rust",
+    name: "VirtualTouchpadEngine", symbol: "↗", version: "0.5.0", updated: "2026-10-05", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows"], filters: ["windows"], color: "#a7e8cf",
     ja: "タッチ対応サブモニターを、メイン画面用の仮想タッチパッドへ変える常駐ツール。",
     en: "A resident utility that turns a touch-enabled secondary display into a touchpad for the main screen."
@@ -126,13 +126,13 @@ const apps = [
     en: "A fast directory-jump command for Windows, macOS, and Linux: jump by keyword, not by path."
   },
   {
-    name: "Agent-Resume", symbol: "↻", version: "0.5.2", updated: "2026-09-12", stars: 0, forks: 0, language: "Go",
+    name: "Agent-Resume", symbol: "↻", version: "0.7.0", updated: "2026-10-14", stars: 0, forks: 0, language: "Go",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross", "terminal", "ai"], color: "#cbb7ff",
     ja: "現在のディレクトリに関連する複数のCLIコーディングエージェントのセッションを探し、選んで再開するツール。",
     en: "A CLI for finding and resuming sessions from multiple coding agents associated with the current directory."
   },
   {
-    name: "TsubuGallery", symbol: "つ", version: "0.6.3", updated: "2026-09-09", stars: 0, forks: 0, language: "Rust",
+    name: "TsubuGallery", symbol: "つ", version: "0.7.2", updated: "2026-09-23", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows", "macOS", "Linux"], filters: ["cross"], color: "#f8b8d0",
     ja: "つぶやきProcessingの短いスケッチを保存し、グリッドから選んで実行・鑑賞できるクロスプラットフォームギャラリー。",
     en: "A cross-platform gallery for storing, running, and watching short Tsubuyaki Processing sketches."
@@ -147,19 +147,19 @@ const apps = [
 
 const forkedApps = [
   {
-    name: "Ghostty for Windows", repo: "ghostty", symbol: "G>", version: "1.3.2-windows.11", updated: "2026-09-22", stars: 1, forks: 0, language: "Zig",
+    name: "Ghostty for Windows", repo: "ghostty", symbol: "G>", version: "1.3.2-windows.14", updated: "2026-10-15", stars: 5, forks: 0, language: "Zig",
     platforms: ["Windows"], color: "#c9ff45", upstream: "ghostty-org/ghostty",
     ja: "Ghosttyに、Win32、D3D11、ネイティブタブ、分割ペインを備えたWindowsネイティブ対応を加える開発フォーク。",
     en: "A development fork bringing Ghostty to Windows with native Win32 windows, D3D11 rendering, tabs, and split panes."
   },
   {
-    name: "terminal-browser", symbol: "TB", version: "0.11.1-win.1", updated: "2026-09-21", stars: 0, forks: 0, language: "Rust",
+    name: "terminal-browser", symbol: "TB", version: "0.13.4-win.1", updated: "2026-10-03", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows"], color: "#c9ff45", upstream: "zenbu-labs/terminal-browser",
     ja: "ターミナルの中で動くブラウザーに、Windowsネイティブ対応を加えたフォーク。",
     en: "A fork of the browser that runs inside a terminal, extended with native Windows support."
   },
   {
-    name: "terminal-code", symbol: "</>", version: "0.3.4-win.1", updated: "2026-09-04", stars: 0, forks: 0, language: "TypeScript",
+    name: "terminal-code", symbol: "</>", version: "0.4.2-win.1", updated: "2026-10-04", stars: 0, forks: 0, language: "Rust",
     platforms: ["Windows"], color: "#91c8ff", upstream: "zenbu-labs/terminal-code",
     ja: "ターミナル内でVS Codeを使うプロジェクトに、Windows対応を加えたフォーク。",
     en: "A fork for running VS Code inside a terminal, extended with Windows support."
@@ -171,13 +171,13 @@ const forkedApps = [
     en: "A karukan fork exploring rakukan-style neural kana-to-kanji conversion on Linux and macOS."
   },
   {
-    name: "Gforth for Windows", repo: "gforth_for_windows", symbol: "F>", version: "0.7.9_20260708+fukuyori.3.1", updated: "2026-08-01", stars: 1, forks: 0, language: "Forth",
+    name: "Gforth for Windows", repo: "gforth_for_windows", symbol: "F>", version: "0.7.9_20260923+fukuyori.3.4", updated: "2026-10-14", stars: 1, forks: 0, language: "Forth",
     platforms: ["Windows"], color: "#c9ff45", upstream: "forthy42/gforth",
     ja: "MSYS2やMinGWのランタイムを必要とせず、Windows上でネイティブに動作するGforth。",
     en: "A native Windows build of Gforth with no MSYS2 or MinGW runtime requirement."
   },
   {
-    name: "sorcery", symbol: "W!", updated: "2026-09-04", stars: 0, forks: 0, language: "C++ / SDL2",
+    name: "sorcery", symbol: "W!", version: "0.1.0-ja", updated: "2026-09-23", stars: 0, forks: 0, language: "C++ / SDL2", preRelease: true,
     platforms: ["Windows", "Linux"], color: "#ff9c68", upstream: "davemoore22/sorcery",
     ja: "古典CRPG『Wizardry』のオープンソース・リメイクを追随し、UI調整を加えたフォーク。",
     en: "A fork of the open-source Wizardry remake, tracking its SDL/ImGui work with additional UI refinements."
